@@ -89,7 +89,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch('assets/WhatsAppChatwithHarsitSsHospital.json')
+  fetch('chat.json')
     .then(response => response.json())
     .then(data => initChat(data))
     .catch(error => console.error("Error loading chat:", error));
