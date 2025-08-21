@@ -1,0 +1,196 @@
+.rounded-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;   /* ensures it's a perfect circle */
+  object-fit: cover;    /* prevents distortion */
+  border: 1px solid #25d366; /* optional: WhatsApp green border */
+}
+
+.chat-header-prof {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 8px 12px;
+  /* background: #202c33;      WhatsApp dark header color */
+  color: white;
+  /* border-bottom: 1px solid #2f3b43; */
+}
+
+.chat-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chat-status {
+  font-size: 12px;
+  color: #25d366;           /* WhatsApp green for "online" */
+  margin-top: 2px;
+}
+
+#chat-container {
+  background: url('https://1.bp.blogspot.com/-NBn1uP5QazQ/XOAwczelidI/AAAAAAAAZGE/jROkkIzKjUEhUTHGuHhX-Fd9FA_mimMFwCLcBGAs/s1600/3.jpg') no-repeat center center;
+  background-size: cover;         /* makes it fill nicely */
+  padding: 16px;
+  height: 90vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Arial, sans-serif; /* sleeker font */
+  display: flex;
+  flex-direction: column;         /* for stacking messages */
+  gap: 8px;                       /* spacing between messages */
+
+  /* Hide scrollbar – Chrome, Edge, Safari */
+  /* scrollbar-width: none;       /* Firefox */
+  /* -ms-overflow-style: none;    IE & Edge */ 
+}
+
+/* #chat-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge
+} */
+
+.date-divider {
+  width: 120px;
+  margin: 10px auto;       /* centers horizontally */
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 8px;      /* adjust px for more/less roundness */
+  padding: 5px;            /* optional: adds space inside */
+}
+
+
+.message-wrapper {
+  display: flex;
+  margin: 5px 0;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-left {
+  max-width: 70%;                  /* prevents bubble from being too wide */
+  background: #2f2f2f;             /* slightly softer dark background */
+  color: #fff;
+  margin-right: auto;               /* keeps it aligned left */
+  padding: 10px 14px;               /* better internal spacing */
+  border-radius: 12px 12px 12px 4px; /* smoother rounded corners */
+  font-size: 14px;                  /* clean text size */
+  line-height: 1.4;                 /* improves readability */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle depth */
+  word-wrap: break-word;            /* handles long words */
+}
+
+
+.message-right {
+  max-width: 70%;                  /* prevents bubble from being too wide */
+  background: #005509;           /* slightly softer dark background */
+  color: #fff;
+  margin-left: auto;               /* keeps it aligned left */
+  padding: 10px 14px;               /* better internal spacing */
+  border-radius: 12px 12px 4px 12px ; /* smoother rounded corners */
+  font-size: 14px;                  /* clean text size */
+  line-height: 1.4;                 /* improves readability */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle depth */
+  word-wrap: break-word;            /* handles long words */
+}
+
+.timestamp {
+  display: block;
+  font-size: 10px;
+  color: #ccc;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* .chat-img {
+  max-width: 200px;
+  border-radius: 10px;
+} */
+ .chat-img {                /* takes full width of its container */
+  object-fit: cover;           /* crops nicely if inside fixed box */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover */
+}
+.chat-img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  display: block;
+  margin-top: 4px;
+}
+
+.image-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.3;
+}
+
+.chat-video {
+  max-width: 250px;
+  border-radius: 10px;
+}
+.chat-video {
+  max-width: 220px;
+  border-radius: 10px;
+  margin-top: 4px;
+  display: block;
+}
+
+.video-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.3;
+}
+
+.link-preview {
+  background: #222;
+  color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Popup overlay */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Full-size image */
+.popup-content {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 60px;
+}
+
+/* Caption below image */
+.popup-caption {
+  color: #ccc;
+  font-size: 16px;
+  margin-top: 12px;
+}
