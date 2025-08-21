@@ -89,7 +89,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch('assets/chat.json')
+  fetch('assets/WhatsApp Chat with Harsit Ss Hospital.json')
     .then(response => response.json())
     .then(data => initChat(data))
     .catch(error => console.error("Error loading chat:", error));
@@ -269,3 +269,4 @@ document.getElementById("image-popup").addEventListener("click", (e) => {
     e.target.style.display = "none";
   }
 });
+
